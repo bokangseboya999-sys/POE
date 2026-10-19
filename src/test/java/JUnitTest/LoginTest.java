@@ -32,7 +32,7 @@ public class LoginTest {
     @Test
     public void testValidPassword() {
         Login user = new Login(
-                "bk_1", "Password1!",
+                "Sam_1", "Password1!",
                 "+27838968976", "Bokang", "Seboya");
 
         assertTrue(user.checkPasswordComplexity());
@@ -41,7 +41,7 @@ public class LoginTest {
     @Test
     public void testInvalidPassword() {
         Login user = new Login(
-                "bk_1", "password",
+                "Sam_1", "password",
                 "+27838968976", "Bokang", "Seboya");
 
         assertFalse(user.checkPasswordComplexity());
@@ -50,7 +50,7 @@ public class LoginTest {
     @Test
     public void testValidCellPhone() {
         Login user = new Login(
-                "bk_1", "Password1!",
+                "Sam_1", "Password1!",
                 "+27838968976", "Bokang", "Seboya");
 
         assertTrue(user.checkCellPhoneNumber());
@@ -59,7 +59,7 @@ public class LoginTest {
     @Test
     public void testSuccessfulLogin() {
         Login user = new Login(
-                "bk_1", "Password1!",
+                "Sam_1", "Password1!",
                 "+27838968976", "Bokang", "Seboya");
 
         assertTrue(user.loginUser("bk_1", "Password1!"));
@@ -68,10 +68,10 @@ public class LoginTest {
     @Test
     public void testFailedLogin() {
         Login user = new Login(
-                "bk_1", "Password1!",
+                "Sam_1", "Password1!",
                 "+27838968976", "Bokang", "Seboya");
 
-        assertFalse(user.loginUser("bk_1", "wrong"));
+        assertFalse(user.loginUser("Sam", "wrong"));
     }
 }
 
