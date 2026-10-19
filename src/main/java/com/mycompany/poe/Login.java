@@ -32,7 +32,7 @@ public class Login {
     public boolean checkUserName() {
         return username != null
                 && username.contains("_")
-                && username.length() <= 4;
+                && username.length() <= 5;
     }
 
     // Check password complexity
