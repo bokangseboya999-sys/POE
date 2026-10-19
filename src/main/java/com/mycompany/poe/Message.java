@@ -46,7 +46,7 @@ public class Message {
     // Message must contain fewer than 250 characters
     public boolean checkMessageLength() {
         return messageText != null
-                && messageText.length() < 250;
+                && messageText.length() < 280;
     }
 
     // Return the message tracking ID
